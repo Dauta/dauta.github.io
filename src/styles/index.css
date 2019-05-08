@@ -76,54 +76,6 @@ body {
   ************ RESPONSIVE STYLES *************
   ========================================= */
 
-
-  /* ----------- iPhone 4 and 4S ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2) {
-  .name-container {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  .name-container .name-title {
-    font-family: 'Righteous', cursive;
-    font-size: 80px;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-/* Portrait */
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
-}
-
-/* Landscape */
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: landscape) {
-
-}
-
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
@@ -131,7 +83,22 @@ and (orientation: landscape) {
 and (min-device-width: 320px) 
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
+  .name-container .name-title {
+    font-size: 112px;
+    text-align: center;
+  }
 
+  .name-container .profession-text {
+    font-size: 55px;
+  }
+
+  .name-container.blue .name-title {
+    animation: blueshiftMobile 6s linear 2s infinite forwards;
+  }
+  
+  .name-container.red .name-title {
+    animation: redshiftMobile 6s linear 2s infinite forwards;
+  }
 }
 
 /* Portrait */
@@ -158,7 +125,22 @@ and (orientation: landscape) {
 and (min-device-width: 375px) 
 and (max-device-width: 667px) 
 and (-webkit-min-device-pixel-ratio: 2) { 
+  .name-container .name-title {
+    font-size: 112px;
+    text-align: center;
+  }
 
+  .name-container .profession-text {
+    font-size: 50px;
+  }
+
+  .name-container.blue .name-title {
+    animation: blueshiftMobile 6s linear 2s infinite forwards;
+  }
+  
+  .name-container.red .name-title {
+    animation: redshiftMobile 6s linear 2s infinite forwards;
+  }
 }
 
 /* Portrait */
@@ -186,7 +168,22 @@ and (orientation: landscape) {
 and (min-device-width: 414px) 
 and (max-device-width: 736px) 
 and (-webkit-min-device-pixel-ratio: 3) { 
+  .name-container .name-title {
+    font-size: 125px;
+    text-align: center;
+  }
 
+  .name-container .profession-text {
+    font-size: 60px;
+  }
+
+  .name-container.blue .name-title {
+    animation: blueshiftMobile 6s linear 2s infinite forwards;
+  }
+  
+  .name-container.red .name-title {
+    animation: redshiftMobile 6s linear 2s infinite forwards;
+  }
 }
 
 /* Portrait */
