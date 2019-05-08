@@ -1,0 +1,99 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0f1225;
+  overflow: hidden;
+}
+
+.name-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.name-container .name-title {
+  font-family: 'Righteous', cursive;
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.name-container.blue {
+  background-color: rgba(0, 0, 0, 0);
+  color: #7fa5f1;
+}
+
+.name-container.red {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ed84fb;
+}
+
+.name-container.blue .name-title {
+  animation: blueshift 8s linear 0s infinite forwards;
+}
+
+.name-container.red .name-title {
+  animation: redshift 8s linear 0s infinite forwards;
+}
+
+@keyframes blueshift {
+  0% {margin-left: 0}
+  69% {margin-left: 0}
+  70% {margin-left: -8px}
+  79% {margin-left: -8px}
+  80% {margin-left: 0}
+  91% {margin-left: 0}
+  92% {margin-left: -6px}
+  95% {margin-left: -10px}
+  96% {margin-left: 0}
+  100% {margin-left: 0}
+}
+
+@keyframes redshift {
+  0% {margin-left: 0}
+  69% {margin-left: 0}
+  70% {margin-left: 7px}
+  79% {margin-left: 8px}
+  80% {margin-left: 0}
+  92% {margin-left: 0}
+  93% {margin-left: 11px}
+  97% {margin-left: 11px}
+  98% {margin-left: 0}
+  100% {margin-left: 0}
+}
+
+.name-container p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.rocket-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+
+  transition: transform .2s ease-in-out;
+}
+
+.rocket {
+  height: 100%;
+  width: 60px;
+  background-color: pink;
+}
