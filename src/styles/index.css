@@ -40,37 +40,11 @@ body {
 }
 
 .name-container.blue .name-title {
-  animation: blueshift 8s linear 0s infinite forwards;
+  animation: blueshift 6s linear 2s infinite forwards;
 }
 
 .name-container.red .name-title {
-  animation: redshift 8s linear 0s infinite forwards;
-}
-
-@keyframes blueshift {
-  0% {margin-left: 0}
-  69% {margin-left: 0}
-  70% {margin-left: -8px}
-  79% {margin-left: -8px}
-  80% {margin-left: 0}
-  91% {margin-left: 0}
-  92% {margin-left: -6px}
-  95% {margin-left: -10px}
-  96% {margin-left: 0}
-  100% {margin-left: 0}
-}
-
-@keyframes redshift {
-  0% {margin-left: 0}
-  69% {margin-left: 0}
-  70% {margin-left: 7px}
-  79% {margin-left: 8px}
-  80% {margin-left: 0}
-  92% {margin-left: 0}
-  93% {margin-left: 11px}
-  97% {margin-left: 11px}
-  98% {margin-left: 0}
-  100% {margin-left: 0}
+  animation: redshift 6s linear 2s infinite forwards;
 }
 
 .name-container p {
@@ -96,4 +70,241 @@ body {
   height: 100%;
   width: 60px;
   background-color: pink;
+}
+
+  /* =========================================
+  ************ RESPONSIVE STYLES *************
+  ========================================= */
+
+
+  /* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .name-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .name-container .name-title {
+    font-family: 'Righteous', cursive;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+  .name-container .name-title {
+    font-size: 125px;
+    text-align: center;
+  }
+
+  .name-container .profession-text {
+    font-size: 60px;
+  }
+
+  .name-container.blue .name-title {
+    animation: blueshiftMobile 6s linear 2s infinite forwards;
+  }
+  
+  .name-container.red .name-title {
+    animation: redshiftMobile 6s linear 2s infinite forwards;
+  }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {  
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+
+}
+
+
+  /* =========================================
+  ***************** KEYFRAMES ****************
+  ========================================= */
+
+
+
+@keyframes blueshift {
+  0% {margin-left: 0}
+  49% {margin-left: 0}
+  50% {margin-left: -8px}
+  59% {margin-left: -8px}
+  60% {margin-left: 0}
+  85% {margin-left: 0}
+  86% {margin-left: -6px}
+  95% {margin-left: -8px}
+  96% {margin-left: 0}
+  100% {margin-left: 0}
+}
+
+@keyframes redshift {
+  0% {margin-left: 0}
+  49% {margin-left: 0}
+  50% {margin-left: 10px}
+  59% {margin-left: 10px}
+  60% {margin-left: 0}
+  85% {margin-left: 0}
+  86% {margin-left: 8px}
+  95% {margin-left: 9px}
+  96% {margin-left: 0}
+  100% {margin-left: 0}
+}
+
+@keyframes blueshiftMobile {
+  0% {margin-left: 0}
+  49% {margin-left: 0}
+  50% {margin-left: -18px}
+  59% {margin-left: -18px}
+  60% {margin-left: 0}
+  85% {margin-left: 0}
+  86% {margin-left: -16px}
+  95% {margin-left: -18px}
+  96% {margin-left: 0}
+  100% {margin-left: 0}
+}
+
+@keyframes redshiftMobile {
+  0% {margin-left: 0}
+  49% {margin-left: 0}
+  50% {margin-left: 20px}
+  59% {margin-left: 20px}
+  60% {margin-left: 0}
+  85% {margin-left: 0}
+  86% {margin-left: 18px}
+  95% {margin-left: 19px}
+  96% {margin-left: 0}
+  100% {margin-left: 0}
 }

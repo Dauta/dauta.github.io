@@ -1,11 +1,33 @@
 // constants
-const body = document.querySelector('body');
 const MAX_ALPHA = 180;
 const MIN_ALPHA = 10;
+const MAX_FRAME_RATE = 30;
+const PIXEL_DENSITY = density();
+const IS_MOBILE = isMobile();
 // global variables
-let NUMBER_OF_PARTICLES = Math.floor((body.clientWidth * body.clientHeight) / 2000);
+let NUMBER_OF_PARTICLES = calculateNumberOfParticles();
 let PARTICLES = [];
 let BACKGROUND_COLOR = [255, 255, 255];
+
+function isMobile() {
+  const body = document.querySelector('body');
+  const { clientWidth, clientHeight } = body;
+
+  return clientHeight > clientWidth ? true : false;
+}
+
+function density() {
+  const body = document.querySelector('body');
+  const { clientWidth, clientHeight } = body;
+
+  return clientWidth * clientHeight;
+}
+
+function calculateNumberOfParticles() {
+  if(IS_MOBILE) return Math.floor(PIXEL_DENSITY / 4000);
+
+  return Math.floor(PIXEL_DENSITY / 2000); 
+}
 
 // create particles
 function generateParticle() {
@@ -134,6 +156,7 @@ function initBackgroundCanvas() {
 }
 
 function setup() {
+  frameRate(MAX_FRAME_RATE);
   // create canvas
   initBackgroundCanvas();
   // add particles
@@ -150,6 +173,6 @@ function draw() {
 // handle resize
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight, true);
-  NUMBER_OF_PARTICLES = Math.floor((windowWidth * windowHeight) / 2000);
+  NUMBER_OF_PARTICLES = calculateNumberOfParticles();
   populateParticles();
 }
