@@ -1,9 +1,9 @@
 // constants
-const MAX_ALPHA = 180;
-const MIN_ALPHA = 10;
-const MAX_FRAME_RATE = 30;
 const PIXEL_DENSITY = density();
 const IS_MOBILE = isMobile();
+const MAX_ALPHA = IS_MOBILE ? 120 : 180;
+const MIN_ALPHA = 10;
+const MAX_FRAME_RATE = 30;
 // global variables
 let NUMBER_OF_PARTICLES = calculateNumberOfParticles();
 let PARTICLES = [];
