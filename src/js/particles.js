@@ -1,8 +1,8 @@
 // constants
 const PIXEL_DENSITY = density();
 const IS_MOBILE = isMobile();
-const MAX_ALPHA = IS_MOBILE ? 120 : 180;
-const MIN_ALPHA = 10;
+const MAX_ALPHA = IS_MOBILE ? 100 : 180;
+const MIN_ALPHA = 40;
 const MAX_FRAME_RATE = 30;
 // global variables
 let NUMBER_OF_PARTICLES = calculateNumberOfParticles();
@@ -24,16 +24,16 @@ function density() {
 }
 
 function calculateNumberOfParticles() {
-  if(IS_MOBILE) return Math.floor(PIXEL_DENSITY / 4000);
+  if(IS_MOBILE) return Math.floor(PIXEL_DENSITY / 10000);
 
   return Math.floor(PIXEL_DENSITY / 2000); 
 }
 
 // create particles
 function generateParticle() {
-  const size = 6 + random(-4, 4);
+  const size = IS_MOBILE ? 20 + random(-10, 10) : 6 + random(-4, 4);
   const color = generateParticleColor();
-  const alpha = 60 + random(-60, 120);
+  const alpha = 0; // + random(-60, 120);
   const alphaShiftDirection = alpha > ((MAX_ALPHA + MIN_ALPHA) / 2) ? 1 : -1;
   const position = [random(0, windowWidth), random(0, windowHeight)];
   const angle = TWO_PI / random(5,13);
@@ -63,8 +63,8 @@ function jiggleParticles() {
   PARTICLES = PARTICLES.map(p => {
     return {
       ...p,
-      x: p.x + random(-2, 2),
-      y: p.y + random(-2, 2),
+      x: p.x + random(-1.4, 1.4),
+      y: p.y + random(-1.4, 1.4),
     }
   });
 }
@@ -96,7 +96,7 @@ function generateCanvasColor() {
 function shiftParticlesAlpha() {
   PARTICLES = PARTICLES.map((p) => {
     const { alpha, alphaShiftDirection } = p;
-    let shiftValue = alphaShiftDirection * random(0, 3);
+    let shiftValue = alphaShiftDirection * (IS_MOBILE ? random(2, 6) : random(3, 15));
     let newAlpha = alpha + shiftValue;
     let newShiftDirection = alphaShiftDirection;
 
@@ -160,7 +160,7 @@ function setup() {
   // create canvas
   initBackgroundCanvas();
   // add particles
-  populateParticles();
+  setTimeout(populateParticles, 800);
 }
 
 function draw() {

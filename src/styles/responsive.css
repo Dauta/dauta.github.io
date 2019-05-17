@@ -1,0 +1,237 @@
+  /* =========================================
+  ************ RESPONSIVE STYLES *************
+  ========================================= */
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .glitch-container {
+    height: 300px;
+  }
+
+  .name-container {
+    font-size: 125px;
+    text-align: center;
+  }
+
+  .sub-text {
+    font-size: 60px;
+  }
+
+  .name-container::before {
+    animation: blueshiftMobile 10s linear 0s infinite forwards;
+  }
+  
+  .name-container::after {
+    animation: redshiftMobile 12s linear 0s infinite forwards;
+  }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2) { 
+  .glitch-container {
+    height: 320px;
+  }
+
+  .name-container {
+    font-size: 140px;
+    text-align: center;
+  }
+
+  .sub-text {
+    font-size: 55px;
+  }
+
+  .name-container::before {
+    animation: blueshiftMobile 10s linear 0s infinite forwards;
+  }
+  
+  .name-container::after {
+    animation: redshiftMobile 12s linear 0s infinite forwards;
+  }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+  .glitch-container {
+    height: 300px
+  }
+
+  .name-container {
+    font-size: 125px;
+    text-align: center;
+  }
+
+  .sub-text {
+    font-size: 60px;
+  }
+
+  .name-container::before {
+    animation: blueshiftMobile 10s linear 0s infinite forwards;
+  }
+  
+  .name-container::after {
+    animation: redshiftMobile 12s linear 0s infinite forwards;
+  }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {  
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) {
+  .glitch-container {
+    height: 300px
+  }
+
+  .name-container {
+    font-size: 140px;
+    text-align: center;
+  }
+
+  .sub-text {
+    font-size: 60px;
+  }
+
+  .name-container::before {
+    animation: blueshiftMobile 10s linear 0s infinite forwards;
+  }
+  
+  .name-container::after {
+    animation: redshiftMobile 12s linear 0s infinite forwards;
+  }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+
+}
+
+
+@keyframes blueshiftMobile {
+  0% {
+    margin-left: -8px;
+    margin-top: -8px
+  }
+  25% {
+    margin-left: 8px;
+    margin-top: 0px
+  }
+  50% {
+    margin-left: -5px;
+    margin-top: 8px
+  }
+  75% {
+    margin-left: 5px;
+    margin-top: -5px
+  }
+  100% {
+    margin-left: 0px;
+    margin-top: -8px
+  }
+}
+
+@keyframes redshiftMobile {
+  0% {
+    margin-left: 8px;
+    margin-top: 8px
+  }
+  25% {
+    margin-left: -8px;
+    margin-top: 0px
+  }
+  50% {
+    margin-left: 5px;
+    margin-top: -8px
+  }
+  75% {
+    margin-left: -5px;
+    margin-top: 5px
+  }
+  100% {
+    margin-left: 0px;
+    margin-top: 8px
+  }
+}
