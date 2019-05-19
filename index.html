@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>Irakli - Web Developer</title>
     <link rel="stylesheet" type="text/css" href="src/styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles/navbar.css" />
     <link rel="stylesheet" type="text/css" href="src/styles/responsive.css" />
     <link rel="stylesheet" type="text/css" href="src/styles/normalize.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="src/js/particles.js"></script>
   </head>
   <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="navigation">
+        <div class="fold in">
+          <span class="menu-item">menu</span>
+        </div>
+        <div class="fold out">
+          <a href="#landing-screen" class="menu-item">Home</a>
+          <a href="#about-me" class="menu-item">About me</a>
+          <span class="menu-item">Tech I love</span>
+          <span class="menu-item">Experience</span>
+          <span class="menu-item">Download CV</span>
+          <span class="menu-item">Get in touch</span>
+        </div>
+        <div class="menu-icon">
+          <i class="fas fa-asterisk"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME/LANDING SCREEN -->
+    <a name="landing-screen"></a>
     <div class="landing-screen">
       <p class="sub-text">Hi, I'm</p>
       <div class="glitch-container">
@@ -18,8 +46,14 @@
           IRAKLI DAUTASHVILI
         </div>
       </div>
-      <p class="sub-text">Web & Mobile developer</p>
+      <p class="sub-text">Full-stack web developer</p>
     </div>
-    <script src="src/js/particles.js"></script>
+
+    <!-- ABOUT ME -->
+    <a name="about-me"></a>
+    <div class="about-me">
+      About me
+    </div>
+    <script src="src/js/navbar.js"></script>
   </body>
 </html>

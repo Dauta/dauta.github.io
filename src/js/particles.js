@@ -1,5 +1,4 @@
 // constants
-const PIXEL_DENSITY = density();
 const IS_MOBILE = isMobile();
 const MAX_ALPHA = IS_MOBILE ? 100 : 180;
 const MIN_ALPHA = 40;
@@ -10,23 +9,18 @@ let PARTICLES = [];
 let BACKGROUND_COLOR = [255, 255, 255];
 
 function isMobile() {
-  const body = document.querySelector('body');
-  const { clientWidth, clientHeight } = body;
-
-  return clientHeight > clientWidth ? true : false;
+  const { innerWidth, innerHeight } = window;
+  return innerHeight > innerWidth ? true : false;
 }
 
 function density() {
-  const body = document.querySelector('body');
-  const { clientWidth, clientHeight } = body;
-
-  return clientWidth * clientHeight;
+  const { innerWidth, innerHeight } = window;
+  return innerWidth * innerHeight;
 }
 
 function calculateNumberOfParticles() {
-  if(IS_MOBILE) return Math.floor(PIXEL_DENSITY / 10000);
-
-  return Math.floor(PIXEL_DENSITY / 2000); 
+  if(IS_MOBILE) return Math.floor(density() / 10000);
+  return Math.floor(density() / 4000); 
 }
 
 // create particles
@@ -142,9 +136,19 @@ function backgroundHue() {
   );
 }
 
+function applyCanvasStyles(canvas) {
+  canvas.style('display', 'block'); 
+  canvas.style('position', 'fixed');
+  canvas.style('top', '0');
+  canvas.style('left', '0');
+  canvas.style('z-index', '-2');
+}
+
 function initBackgroundCanvas() {
   // create a full-screen canvas
-  createCanvas(windowWidth, windowHeight);
+  const mainCanvas = createCanvas(windowWidth, windowHeight);
+  applyCanvasStyles(mainCanvas);
+
   stroke(0, 0, 0, 0);
   BACKGROUND_COLOR = generateCanvasColor();
   background(

@@ -1,0 +1,93 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 60px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 1;
+}
+
+.navigation {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  max-width: 80%;
+  font-size: 35px;
+  color: white;
+}
+
+.navigation > .menu-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  margin: 0 10px;
+}
+
+.navigation > .menu-icon > * {
+  transition: .4s ease-in-out;
+}
+
+.fold {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.fold .menu-item {
+  margin: 0 10px;
+  transition: .4s ease-in-out;
+}
+
+.fold.in > .menu-item {
+  animation: fade-in-dim-out 2s ease-in 0s 1;
+  pointer-events: none;
+  opacity: .2;
+}
+
+.fold.out {
+  display: none;
+  opacity: 0;
+  font-size: 28px;
+  transition: opacity .4s ease-in-out;
+}
+
+.fold.out > .menu-item,
+.fold.out > .menu-item:visited {
+  text-decoration: none;
+  color: white;
+  border-left: 2px solid white;
+  margin-left: -10px;
+  padding: 10px;
+}
+
+.fold.out > .menu-item:active {
+  background-color: bisque;
+  color: #0f1225;
+}
+
+.fold.out > .menu-item:hover {
+  background-color: white;
+  color: #0f1225;
+}
+
+.navigation:hover {
+  cursor: pointer;
+}
+
+.navigation:hover > .menu-icon > i {
+  transform: rotate(180deg);
+}
+
+.navigation:hover > .fold.out {
+  animation: fade-in .4s linear 0s 1 forwards;
+  display: flex;
+}
+
+.navigation:hover > .fold.in {
+  display: none;
+}

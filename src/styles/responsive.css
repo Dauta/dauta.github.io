@@ -23,7 +23,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .name-container::before {
-    animation: blueshiftMobile 10s linear 0s infinite forwards;
+    animation: blueshiftMobile 9s linear 0s infinite forwards;
   }
   
   .name-container::after {
@@ -69,7 +69,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .name-container::before {
-    animation: blueshiftMobile 10s linear 0s infinite forwards;
+    animation: blueshiftMobile 9s linear 0s infinite forwards;
   }
   
   .name-container::after {
@@ -103,7 +103,7 @@ and (min-device-width: 375px)
 and (max-device-width: 812px) 
 and (-webkit-min-device-pixel-ratio: 3) { 
   .glitch-container {
-    height: 300px
+    height: 300px;
   }
 
   .name-container {
@@ -116,7 +116,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
   }
 
   .name-container::before {
-    animation: blueshiftMobile 10s linear 0s infinite forwards;
+    animation: blueshiftMobile 9s linear 0s infinite forwards;
   }
   
   .name-container::after {
@@ -163,7 +163,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
   }
 
   .name-container::before {
-    animation: blueshiftMobile 10s linear 0s infinite forwards;
+    animation: blueshiftMobile 9s linear 0s infinite forwards;
   }
   
   .name-container::after {
@@ -189,49 +189,61 @@ and (orientation: landscape) {
 
 }
 
+/* ----------- Tablets ----------- */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .glitch-container {
+    height: 220px;
+  }
+}
+
+
+/* ======================== *
+** ====== KEYFRAMES ======= **
+ * ======================== */
 
 @keyframes blueshiftMobile {
   0% {
     margin-left: -8px;
-    margin-top: -8px
+    margin-top: -8px;
   }
   25% {
     margin-left: 8px;
-    margin-top: 0px
+    margin-top: 0px;
   }
   50% {
     margin-left: -5px;
-    margin-top: 8px
+    margin-top: 8px;
   }
   75% {
     margin-left: 5px;
-    margin-top: -5px
+    margin-top: -5px;
   }
   100% {
-    margin-left: 0px;
-    margin-top: -8px
+    margin-left: -8px;
+    margin-top: -8px;
   }
 }
 
 @keyframes redshiftMobile {
   0% {
     margin-left: 8px;
-    margin-top: 8px
+    margin-top: 8px;
   }
   25% {
     margin-left: -8px;
-    margin-top: 0px
+    margin-top: 0px;
   }
   50% {
     margin-left: 5px;
-    margin-top: -8px
+    margin-top: -8px;
   }
   75% {
     margin-left: -5px;
-    margin-top: 5px
+    margin-top: 5px;
   }
   100% {
-    margin-left: 0px;
-    margin-top: 8px
+    margin-left: 8px;
+    margin-top: 8px;
   }
 }

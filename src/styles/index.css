@@ -1,12 +1,13 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: #0f1225;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .landing-screen {
-  position: absolute;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -40,6 +41,7 @@ body {
   font-weight: 800;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 .name-container::before {
@@ -50,6 +52,7 @@ body {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
   color: #7fa5f1;
+  text-shadow: 0 0 0 5px #7fa5f1;
   animation: blueshift 13s linear 0s infinite alternate;
   z-index: -1
 }
@@ -62,6 +65,7 @@ body {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
   color: #ed84fb;
+  text-shadow: 0 0 0 5px #ed84fb;
   animation: redshift 7s linear 0s infinite alternate-reverse;
   z-index: -1
 }
@@ -71,6 +75,13 @@ body {
   font-size: 30px;
   margin: 0;
   padding: 0;
+  user-select: none;
+}
+
+.about-me {
+  color: white;
+  background-color: #0f0f0f;
+  height: 700px;
 }
 
 /* .rocket-container {
@@ -102,6 +113,22 @@ body {
   100% {opacity: 1;}
 }
 
+/* == dim out with delay == */
+@keyframes fade-in-dim-out {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
 @keyframes blueshift {
   0% {
     margin-left: -5px;
@@ -120,7 +147,7 @@ body {
     margin-top: -3px
   }
   100% {
-    margin-left: 0px;
+    margin-left: -5px;
     margin-top: -5px
   }
 }
@@ -143,7 +170,7 @@ body {
     margin-top: 3px
   }
   100% {
-    margin-left: 0px;
+    margin-left: 5px;
     margin-top: 5px
   }
 }
