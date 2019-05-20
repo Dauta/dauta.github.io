@@ -4,17 +4,36 @@
     <title>Irakli - Web Developer</title>
     <link rel="stylesheet" type="text/css" href="src/styles/index.css" />
     <link rel="stylesheet" type="text/css" href="src/styles/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles/section.css" />
     <link rel="stylesheet" type="text/css" href="src/styles/responsive.css" />
-    <link rel="stylesheet" type="text/css" href="src/styles/normalize.css" />
-
+    <link rel="stylesheet" type="text/css" href="src/styles/lib/normalize.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="src/assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="src/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
     <script src="src/js/particles.js"></script>
+    <script src="src/js/index.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140478239-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140478239-1');
+    </script>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -26,10 +45,10 @@
         <div class="fold out">
           <a href="#landing-screen" class="menu-item">Home</a>
           <a href="#about-me" class="menu-item">About me</a>
-          <span class="menu-item">Tech I love</span>
-          <span class="menu-item">Experience</span>
-          <span class="menu-item">Download CV</span>
-          <span class="menu-item">Get in touch</span>
+          <a href="#tech-i-love" class="menu-item">Tech I love</a>
+          <!-- <a href="#experience" class="menu-item">Experience</a> -->
+          <a href="#contact" class="menu-item">Get in Touch</a>
+          <span class="menu-item menu-item__download">Download My CV</span>
         </div>
         <div class="menu-icon">
           <i class="fas fa-asterisk"></i>
@@ -51,9 +70,88 @@
 
     <!-- ABOUT ME -->
     <a name="about-me"></a>
-    <div class="about-me">
-      About me
+    <div class="screen-section about-me">
+      <div class="screen-section__info-box">
+        <span class="screen-section__title">About Me</span>
+        <span class="screen-section__text-line">Hi, my name is <span class="text-line__bold">Irakli</span></span>
+        <span class="screen-section__text-line">I am a full-stack web and mobile developer from Tbilisi, Georgia.</span>
+        <span class="screen-section__text-line">Currently living and working in a beautiful Belgian town of Leuven.</span>
+        <span class="screen-section__text-line">In my free time I love to make stuff, break stuff and play music</span>
+      </div>
+      <!-- <div class="screen-section__info-box-reverse">
+      </div> -->
     </div>
-    <script src="src/js/navbar.js"></script>
+
+    <!-- TECH I LOVE-->
+    <a name="tech-i-love"></a>
+    <div class="screen-section tech">
+      <div class="screen-section__info-box-reverse">
+        <span class="image-link">
+          <img src="src/assets/images/Mmww2.png" alt="js">
+        </span>
+        <span class="image-link">
+          <img src="src/assets/images/react.png" alt="react">
+        </span>
+        <span class="image-link">
+          <img src="src/assets/images/node.png" alt="node">
+        </span>
+        <span class="image-link">
+          <img src="src/assets/images/rust.png" alt="rust">
+        </span>
+        <span class="image-link">
+          <img src="src/assets/images/aws.jpg" alt="aws">
+        </span>
+        <span class="image-link">
+          <img src="src/assets/images/unity.png" alt="unity">
+        </span>
+      </div>
+      <div class="screen-section__info-box">
+        <span class="screen-section__title">Tech I love</span>
+        <span class="screen-section__text-line">- This is a non-exhaustive list of some of the technologies I like</span>
+        <span class="screen-section__text-line">- I have several years of professional experience with JavaScript, both on server and client side</span>
+        <span class="screen-section__text-line">- I consider myself adequate in working with CSS and more general web-design</span>
+        <span class="screen-section__text-line">- Have working in devOps. Current technologies of choice are Docker and AWS. Also worked with DigitalOcean and Heroku. Experience with Jenkins and CircleCI</span>
+        <span class="screen-section__text-line">- Functional programming enthusiast</span>
+        <span class="screen-section__text-line">- Currently interested in and attempting to learn Rust</span>
+        <span class="screen-section__text-line">- Game development is a longstanding passion of mine</span>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <!-- <a name="experience"></a>
+    <div class="screen-section">
+      Experience
+    </div> -->
+
+    <!-- GET IN TOUCH -->
+    <a name="contact"></a>
+    <div class="screen-section contact">
+      <div class="screen-section__info-box">
+        <span class="screen-section__title">Get in touch!</span>
+        <span class="screen-section__text-line">I'm alway open for a friendly chat about any topic</span>
+        <span class="screen-section__text-line">If you like any of my work or have something to share, I'd love to hear it!</span>
+        <span class="screen-section__text-line"><span class="text-line__bold">Feel free to drop me a line here</span></span>
+        <span class="screen-section__text-line-wide">E-mail: <a href="mailto:idauta@gmail.com">idauta@gmail.com</a></span>
+        <span class="screen-section__text-line-wide">Phone: <span>+32 483 011403</span></span>
+        <br />
+      </div>
+      <div class="screen-section__info-box-reverse">
+        <span class="screen-section__text-line"><span class="text-line__bold">Or find me on any of these links</span></span>
+        <div class="screen-section__link-box">
+          <a href="https://github.com/dauta" target="blank" class="image-link">
+            <img src="src/assets/images/GitHub-Mark-Light-120px-plus.png" alt="Github">
+          </a>
+          <a href="https://www.linkedin.com/in/iraklidautashvili/" target="blank" class="image-link">
+            <img src="src/assets/images/In-White-72.png" alt="linkedin">
+          </a>
+          <a href="https://twitter.com/irakli_dauta" target="blank" class="image-link">
+            <img src="src/assets/images/Twitter_Social_Icon_Circle_White.png" alt="twitter">
+          </a>
+          <a href="https://soundcloud.com/dauta" target="blank" class="image-link">
+            <img src="src/assets/images/soundcloud.png" alt="soundcloud">
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

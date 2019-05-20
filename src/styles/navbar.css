@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  height: 60px;
+  height: 58px;
   font-family: 'Raleway', sans-serif;
-  z-index: 1;
+  z-index: 9;
 }
 
 .navigation {
@@ -14,8 +14,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  max-width: 80%;
-  font-size: 35px;
+  max-width: 100%;
+  font-size: 30px;
   color: white;
 }
 
@@ -29,6 +29,7 @@
 }
 
 .navigation > .menu-icon > * {
+  font-size: 35px;
   transition: .4s ease-in-out;
 }
 
@@ -52,7 +53,6 @@
 .fold.out {
   display: none;
   opacity: 0;
-  font-size: 28px;
   transition: opacity .4s ease-in-out;
 }
 
@@ -65,18 +65,30 @@
   padding: 10px;
 }
 
-.fold.out > .menu-item:active {
-  background-color: bisque;
-  color: #0f1225;
-}
-
+.fold.out > .menu-item:active,
 .fold.out > .menu-item:hover {
   background-color: white;
   color: #0f1225;
 }
 
+.fold.out > .menu-item__download {
+  background-color: white;
+  color: #0f1225;
+}
+
+.fold.out > .menu-item__download:hover {
+  background-color: #bde7e0;
+}
+
+.fold.out > .menu-item__download:active {
+  background-color: #80e5d4;
+}
+
 .navigation:hover {
   cursor: pointer;
+  width: 100%;
+  background-color: #00000066;
+  transform: background-color 1.4s ease-in-out;
 }
 
 .navigation:hover > .menu-icon > i {
