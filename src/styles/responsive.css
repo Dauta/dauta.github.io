@@ -2,6 +2,93 @@
   ************ RESPONSIVE STYLES *************
   ========================================= */
 
+/* ----------- Tablets ----------- */
+
+@media (max-width: 1024px) {
+  .glitch-container {
+    height: 120px;
+  }
+
+  .screen-section.contact {
+    flex-direction: column;
+  }
+
+  .screen-section.contact > .screen-section__info-box {
+    width: 60%;
+  }
+
+  .screen-section.contact > .screen-section__info-box-reverse {
+    width: 60%;
+    margin-top: 80px;
+  }
+}
+
+  /** ====== NAVBAR ========== **/
+
+  @media (max-width: 768px) {
+  .glitch-container {
+    height: 200px;
+  }
+
+  .navbar {
+    align-items: flex-start;
+    justify-content: flex-end;
+    right: 0;
+    width: 100%;
+    min-height: 360px;
+  }
+
+  .navigation {
+    font-size: 40px;
+    align-items: flex-start !important;
+  }
+
+  .navigation > .menu-icon {
+    margin: 20px;
+    align-items: flex-start;
+  }
+  
+  .navigation > .menu-icon > * {
+    font-size: 40px;
+  }
+
+  .fold {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .fold.in {
+    align-items: flex-start;
+    margin-top: 14px;
+  }
+  
+  .fold .menu-item {
+    margin: 0 10px;
+  }
+  
+  .fold.in > .menu-item {
+    opacity: .4;
+  }
+  
+  .fold.out {
+    display: none;
+    width: 100%;
+    opacity: 0;
+  }
+
+  .navigation:hover > .fold.out {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  .navigation:hover > .fold.out > .menu-item {
+    border: none;
+  }
+}
+
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
@@ -9,6 +96,65 @@
 and (min-device-width: 320px) 
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
+
+  .navbar {
+    align-items: flex-start;
+    justify-content: flex-end;
+    right: 0;
+    width: 100%;
+    min-height: 460px;
+  }
+
+  .navigation {
+    font-size: 60px;
+    align-items: flex-start !important;
+  }
+
+  .navigation > .menu-icon {
+    margin: 40px;
+    align-items: flex-start;
+  }
+  
+  .navigation > .menu-icon > * {
+    font-size: 60px;
+  }
+
+  .fold {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .fold.in {
+    align-items: flex-start;
+    margin-top: 34px;
+  }
+  
+  .fold .menu-item {
+    margin: 0 10px;
+    transition: .4s ease-in-out;
+  }
+  
+  .fold.in > .menu-item {
+    opacity: .4;
+  }
+  
+  .fold.out {
+    display: none;
+    width: 100%;
+  }
+
+  .navigation:hover > .fold.out {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  .navigation:hover > .fold.out > .menu-item {
+    border: none;
+  }
+
   .glitch-container {
     height: 300px;
   }
@@ -29,23 +175,70 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .name-container::after {
     animation: redshiftMobile 12s linear 0s infinite forwards;
   }
-}
 
-/* Portrait */
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
-}
+  .screen-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+  }
 
-/* Landscape */
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: landscape) {
+  .screen-section.tech {
+    flex-direction: column-reverse;
+  }
 
+  .screen-section__info-box {
+    align-items: flex-start;
+    min-height: 500px;
+    width: 80%;
+    padding: 40px;
+  }
+
+  .screen-section__info-box-reverse {
+    width: 80%;
+    min-height: 300px;
+    width: 84%;
+    margin-top: 80px;
+    border: 1px solid white;
+  }
+  
+  .screen-section.tech > .screen-section__info-box-reverse {
+    padding: 40px 0;
+  }
+
+  .screen-section__text-line {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  
+  .screen-section__text-line-wide {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 14px;
+  }
+
+  .screen-section.about-me > .screen-section__info-box {
+    width: 70%;
+  }
+
+  .screen-section.about-me > .screen-section__info-box-reverse {
+    width: 80%;
+  }
+
+  .screen-section.contact > .screen-section__info-box {
+    width: 80%;
+  }
+
+  .screen-section.contact > .screen-section__info-box-reverse {
+    width: 80%;
+    margin-top: 80px;
+  }
+
+  .screen-section.tech > .screen-section__info-box-reverse > .image-link {
+    width: 22%;
+    margin: 20px;
+  }
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -75,24 +268,57 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .name-container::after {
     animation: redshiftMobile 12s linear 0s infinite forwards;
   }
-}
 
-/* Portrait */
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 667px) 
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) { 
+  .screen-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+  }
 
-}
+  .screen-section.tech {
+    flex-direction: column-reverse;
+  }
 
-/* Landscape */
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 667px) 
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: landscape) { 
+  .screen-section__info-box {
+    align-items: flex-start;
+    min-height: 500px;
+    width: 80%;
+    padding: 40px;
+  }
 
+  .screen-section__info-box-reverse {
+    width: 80%;
+    min-height: 300px;
+    width: 84%;
+    margin-top: 80px;
+    border: 1px solid white;
+  }
+  
+  .screen-section.tech > .screen-section__info-box-reverse {
+    padding: 40px 0;
+  }
+
+  .screen-section__text-line {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  
+  .screen-section__text-line-wide {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 14px;
+  }
+
+  .screen-section.about-me > .screen-section__info-box {
+    width: 80%;
+  }
+
+  .screen-section.tech > .screen-section__info-box-reverse > .image-link {
+    width: 22%;
+    margin: 20px;
+  }
 }
 
 /* ----------- iPhone X ----------- */
@@ -102,6 +328,7 @@ and (orientation: landscape) {
 and (min-device-width: 375px) 
 and (max-device-width: 812px) 
 and (-webkit-min-device-pixel-ratio: 3) { 
+  
   .glitch-container {
     height: 300px;
   }
@@ -122,24 +349,57 @@ and (-webkit-min-device-pixel-ratio: 3) {
   .name-container::after {
     animation: redshiftMobile 12s linear 0s infinite forwards;
   }
-}
 
-/* Portrait */
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: portrait) {  
+  .screen-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+  }
 
-}
+  .screen-section.tech {
+    flex-direction: column-reverse;
+  }
 
-/* Landscape */
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) { 
+  .screen-section__info-box {
+    align-items: flex-start;
+    min-height: 500px;
+    width: 80%;
+    padding: 40px;
+  }
 
+  .screen-section__info-box-reverse {
+    width: 80%;
+    min-height: 300px;
+    width: 84%;
+    margin-top: 80px;
+    border: 1px solid white;
+  }
+  
+  .screen-section.tech > .screen-section__info-box-reverse {
+    padding: 40px 0;
+  }
+
+  .screen-section__text-line {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  
+  .screen-section__text-line-wide {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 14px;
+  }
+
+  .screen-section.about-me > .screen-section__info-box {
+    width: 80%;
+  }
+
+  .screen-section.tech > .screen-section__info-box-reverse > .image-link {
+    width: 22%;
+    margin: 20px;
+  }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -169,31 +429,56 @@ and (-webkit-min-device-pixel-ratio: 3) {
   .name-container::after {
     animation: redshiftMobile 12s linear 0s infinite forwards;
   }
-}
 
-/* Portrait */
-@media only screen 
-and (min-device-width: 414px) 
-and (max-device-width: 736px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: portrait) { 
+  .screen-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+  }
 
-}
+  .screen-section.tech {
+    flex-direction: column-reverse;
+  }
 
-/* Landscape */
-@media only screen 
-and (min-device-width: 414px) 
-and (max-device-width: 736px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) { 
+  .screen-section__info-box {
+    align-items: flex-start;
+    min-height: 500px;
+    width: 80%;
+    padding: 40px;
+  }
 
-}
+  .screen-section__info-box-reverse {
+    width: 80%;
+    min-height: 300px;
+    width: 84%;
+    margin-top: 80px;
+    border: 1px solid white;
+  }
+  
+  .screen-section.tech > .screen-section__info-box-reverse {
+    padding: 40px 0;
+  }
 
-/* ----------- Tablets ----------- */
+  .screen-section__text-line {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  
+  .screen-section__text-line-wide {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 14px;
+  }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .glitch-container {
-    height: 220px;
+  .screen-section.about-me > .screen-section__info-box {
+    width: 80%;
+  }
+
+  .screen-section.tech > .screen-section__info-box-reverse > .image-link {
+    width: 22%;
+    margin: 20px;
   }
 }
 
@@ -204,46 +489,57 @@ and (orientation: landscape) {
 
 @keyframes blueshiftMobile {
   0% {
-    margin-left: -8px;
-    margin-top: -8px;
+    /* margin-left: -8px;
+    margin-top: -8px; */
+    transform: translate(8px, 8px);
   }
   25% {
-    margin-left: 8px;
-    margin-top: 0px;
+    /* margin-left: 8px;
+    margin-top: 0px; */
+    transform: translate(-8px, 0px);
   }
   50% {
-    margin-left: -5px;
-    margin-top: 8px;
+    /* margin-left: -5px;
+    margin-top: 8px; */
+    transform: translate(5px, -8px);
   }
   75% {
-    margin-left: 5px;
-    margin-top: -5px;
+    /* margin-left: 5px;
+    margin-top: -5px; */
+    transform: translate(-5px, 5px);
+
   }
   100% {
-    margin-left: -8px;
-    margin-top: -8px;
+    /* margin-left: -8px;
+    margin-top: -8px; */
+    transform: translate(8px, 8px);
   }
 }
 
 @keyframes redshiftMobile {
   0% {
-    margin-left: 8px;
-    margin-top: 8px;
+    /* margin-left: 8px;
+    margin-top: 8px; */
+    transform: translate(-8px, -8px);
   }
   25% {
-    margin-left: -8px;
-    margin-top: 0px;
+    /* margin-left: -8px;
+    margin-top: 0px; */
+    transform: translate(8px, 0px);
   }
   50% {
-    margin-left: 5px;
-    margin-top: -8px;
+    /* margin-left: 5px;
+    margin-top: -8px; */
+    transform: translate(-5px, 8px);
   }
   75% {
-    margin-left: -5px;
-    margin-top: 5px;
+    /* margin-left: -5px;
+    margin-top: 5px; */
+    transform: translate(5px, -5px);
   }
   100% {
-    margin-left: 8px;
-    margin-top: 8px;
-  }
+    /* margin-left: 8px;
+    margin-top: 8px; */
+    transform: translate(-8px, -8px);
+  };
 }

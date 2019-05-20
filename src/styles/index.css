@@ -1,12 +1,11 @@
 html {
   scroll-behavior: smooth !important;
-  width: 100vw;
 }
 
 body {
   background-color: #0f1225;
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 .landing-screen {
@@ -51,11 +50,10 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  position: absolute;
+  position: absolute !important;
   background-color: rgba(0, 0, 0, 0);
   color: #7fa5f1;
-  text-shadow: 0 0 0 5px #7fa5f1;
-  animation: blueshift 13s linear 0s infinite alternate;
+  animation: blueshift 14s linear 0s infinite alternate;
   z-index: -1
 }
 
@@ -64,11 +62,10 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  position: absolute;
+  position: absolute !important;
   background-color: rgba(0, 0, 0, 0);
   color: #ed84fb;
-  text-shadow: 0 0 0 5px #ed84fb;
-  animation: redshift 7s linear 0s infinite alternate-reverse;
+  animation: redshift 11s linear 0s infinite alternate-reverse;
   z-index: -1
 }
 
@@ -102,52 +99,62 @@ body {
     opacity: 1;
   }
   100% {
-    opacity: .2;
+    opacity: .4;
   }
 }
 
 @keyframes blueshift {
   0% {
-    margin-left: -5px;
-    margin-top: -5px
+    /* margin-left: -5px;
+    margin-top: -5px; */
+    transform: translate(5px, 5px);
   }
   25% {
-    margin-left: 5px;
-    margin-top: 0px
+    /* margin-left: 5px;
+    margin-top: 0px */
+    transform: translate(-5px, 0px);
   }
   50% {
-    margin-left: -3px;
-    margin-top: 5px
+    /* margin-left: -3px;
+    margin-top: 5px */
+    transform: translate(3px, -5px);
   }
   75% {
-    margin-left: 3px;
-    margin-top: -3px
+    /* margin-left: 3px;
+    margin-top: -3px */
+    transform: translate(-3px, 3px);
   }
   100% {
-    margin-left: -5px;
-    margin-top: -5px
+    /* margin-left: -5px;
+    margin-top: -5px */
+    transform: translate(5px, 5px);
   }
 }
 
 @keyframes redshift {
   0% {
-    margin-left: 5px;
-    margin-top: 5px
+    /* margin-left: 5px;
+    margin-top: 5px */
+    transform: translate(-5px, -5px);
   }
   25% {
-    margin-left: -5px;
-    margin-top: 0px
+    /* margin-left: -5px;
+    margin-top: 0px */
+    transform: translate(5px, 0px);
   }
   50% {
-    margin-left: 3px;
-    margin-top: -5px
+    /* margin-left: 3px;
+    margin-top: -5px */
+    transform: translate(-3px, 5px);
   }
   75% {
-    margin-left: -3px;
-    margin-top: 3px
+    /* margin-left: -3px;
+    margin-top: 3px */
+    transform: translate(3px, -3px);
   }
   100% {
-    margin-left: 5px;
-    margin-top: 5px
+    /* margin-left: 5px;
+    margin-top: 5px */
+    transform: translate(-5px, -5px);
   }
 }

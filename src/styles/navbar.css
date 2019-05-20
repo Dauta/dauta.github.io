@@ -47,7 +47,7 @@
 .fold.in > .menu-item {
   animation: fade-in-dim-out 2s ease-in 0s 1;
   pointer-events: none;
-  opacity: .2;
+  opacity: .4;
 }
 
 .fold.out {
